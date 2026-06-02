@@ -6,10 +6,12 @@ Este projeto foi desenvolvido como parte da Avaliação A3 do semestre 2026.1 da
 O sistema consiste em um jogo da velha desenvolvido em Java, executado inteiramente via console, permitindo partidas entre dois jogadores ou contra um bot com inteligência simples.
 
 # Funcionalidades
-• Modo 1 Jogador: O usuário joga contra um bot.
+• Modo 1 Jogador:
+O usuário joga contra um bot.
 O bot utiliza uma lógica simples para realizar suas jogadas.
 
-• Modo 2 Jogadores: Dois jogadores podem jogar alternadamente no mesmo computador.
+• Modo 2 Jogadores:
+Dois jogadores podem jogar alternadamente no mesmo computador.
 
 Verificação automática de:
 
@@ -28,7 +30,7 @@ Interface textual simples e intuitiva via terminal.
 • Entrada e saída de dados via console
 # Como Executar
 Clone o repositório:
-• git clone https://github.com/seu-usuario/seu-repositorio.git
+• git clone https://github.com/unifacsluiz/2026.Jogo-da-Velha.git
 
 Acesse a pasta do projeto:
 • cd seu-repositorio
