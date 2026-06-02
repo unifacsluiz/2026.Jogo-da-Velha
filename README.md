@@ -7,10 +7,13 @@ O sistema consiste em um jogo da velha desenvolvido em Java, executado inteirame
 
 # Funcionalidades
 • Modo 1 Jogador:
+
 O usuário joga contra um bot.
+
 O bot utiliza uma lógica simples para realizar suas jogadas.
 
 • Modo 2 Jogadores:
+
 Dois jogadores podem jogar alternadamente no mesmo computador.
 
 Verificação automática de:
