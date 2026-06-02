@@ -1,1 +1,61 @@
-# 2026.Jogo-da-Velha
+# Jogo da Velha em Java
+# Sobre o Projeto
+
+Este projeto foi desenvolvido como parte da Avaliação A3 do semestre 2026.1 da UC Algoritmos e Programação.
+
+O sistema consiste em um jogo da velha desenvolvido em Java, executado inteiramente via console, permitindo partidas entre dois jogadores ou contra um bot com inteligência simples.
+
+# Funcionalidades
+## Modo 1 Jogador:
+
+O usuário joga contra um bot.
+
+O bot utiliza uma lógica simples para realizar suas jogadas.
+
+## Modo 2 Jogadores:
+
+Dois jogadores podem jogar alternadamente no mesmo computador.
+
+## Verificação automática de:
+
+• Vitória de um jogador.
+
+• Empate.
+
+• Jogadas inválidas.
+
+Interface textual simples via terminal.
+# Tecnologias Utilizadas
+• Java
+
+• Programação Orientada a Objetos
+
+• Entrada e saída de dados via console
+# Como Executar
+```bash
+git clone https://github.com/unifacsluiz/2026.Jogo-da-Velha.git
+
+cd 2026.Jogo-da-Velha
+
+javac *.java
+
+java Main
+```
+
+# Objetivos de Aprendizagem
+
+Este projeto foi desenvolvido com o objetivo de aplicar conceitos estudados na UC, incluindo:
+
+• Estruturas condicionais;
+
+• Estruturas de repetição;
+
+• Vetores e matrizes;
+
+• Modularização de código;
+
+• Manipulação de entrada e saída de dados;
+
+• Lógica de programação;
+
+• Programação Orientada a Objetos em Java.
