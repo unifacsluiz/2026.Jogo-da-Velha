@@ -6,6 +6,7 @@ package app;
 import java.util.Scanner;
 
 public class A3 {
+    public static int[] placar = {0,0};
     public static void construir(char[][] matriz) throws Exception { // exibir matriz da velha
         for (int linha = 0; linha < matriz.length; linha++) {
             System.out.print("-> |  ");
@@ -174,7 +175,7 @@ public class A3 {
                     ganhador = (outrojogador);
                 }
                 System.out.println("_________________");
-                System.out.print("-----------------");
+                System.out.println("-----------------");
                 break;
             }
         } while (rodada < 9); // maximo de rodadas, falta a logica de vitoria
@@ -187,10 +188,8 @@ public class A3 {
             System.out.println("-----------------");
             System.out.println("-> Deu VELHA!");
             System.out.println("_________________");
-            System.out.print("-----------------");
+            System.out.println("-----------------");
             ganhador = 'D';
-
-            
         }
         return ganhador;
     }
@@ -202,14 +201,12 @@ public class A3 {
         else {
             ponto = 1;
         }
-        
         return ponto;
     };
     public static void main(String[] args) throws Exception {
         char escolha = 'o'; // valor padrao
         int jogadores = 1; // valor padrao
         char ponto = 'D'; // inicia variavel ponto
-        int[] placar = {0,0};
         Scanner sc = new Scanner(System.in); // abertura de scanner
         do {
             System.out.print("Quantidade de jogadores (1/2): ");
@@ -222,6 +219,15 @@ public class A3 {
         ponto = jogo(sc, escolha, jogadores); // chamando o jogo com os parametros dentro da variavel ponto para definir o ganhador
         placar[Pontuação(ponto, escolha)]++; // icrementa a pontuação dentro do placar
         System.out.println("Jogador 1: " + placar[0] + "Jogador 2: " + placar[1]);
-        sc.close(); // fechamento esperado
+        char jogarnovamente = '?';
+        do {
+            System.out.print("Jogar novamente? (y/n): ");
+            jogarnovamente = sc.next().charAt(0); // jogar novamente?
+        } while (jogarnovamente != 'y' && jogarnovamente != 'n');
+        if (jogarnovamente == 'y') {
+            main(new String[0]);
+        } else {
+            sc.close(); // fechamento esperado
+        }
     };
 };
