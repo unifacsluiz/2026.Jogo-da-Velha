@@ -1,7 +1,7 @@
 # Jogo da Velha em Java
 # Sobre o Projeto
 
-Este projeto foi desenvolvido como parte da Avaliação A3 do semestre 2026.1 da disciplina Algoritmos e Programação.
+Este projeto foi desenvolvido como parte da Avaliação A3 do semestre 2026.1 da UC Algoritmos e Programação.
 
 O sistema consiste em um jogo da velha desenvolvido em Java, executado inteiramente via console, permitindo partidas entre dois jogadores ou contra um bot com inteligência simples.
 
@@ -24,7 +24,7 @@ Dois jogadores podem jogar alternadamente no mesmo computador.
 
 • Jogadas inválidas.
 
-Interface textual simples e intuitiva via terminal.
+Interface textual simples via terminal.
 # Tecnologias Utilizadas
 • Java
 
@@ -44,7 +44,7 @@ java Main
 
 # Objetivos de Aprendizagem
 
-Este projeto foi desenvolvido com o objetivo de aplicar conceitos estudados na disciplina, incluindo:
+Este projeto foi desenvolvido com o objetivo de aplicar conceitos estudados na UC, incluindo:
 
 • Estruturas condicionais;
 
