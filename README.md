@@ -35,14 +35,12 @@ Interface textual simples e intuitiva via terminal.
 ```bash
 git clone https://github.com/unifacsluiz/2026.Jogo-da-Velha.git
 
-cd seu-repositorio
+cd 2026.Jogo-da-Velha
 
 javac *.java
 
 java Main
 ```
-
-Obs.: O nome da classe principal pode variar conforme a implementação do projeto.
 
 # Objetivos de Aprendizagem
 
