@@ -69,13 +69,14 @@ public class A3 {
         }
         return new boolean[]{false, false};
     }
-    public static void jogo(Scanner sc, char escolhido, int jogadores) throws Exception {
+    public static char jogo(Scanner sc, char escolhido, int jogadores) throws Exception {
         int rodada = 0; // iniciando partida
         int cursorlinha = 1; // iniciando cursor linha
         int cursorcoluna = 1; // iniciando cursor coluna
         char outrojogador = (escolhido == 'x') ? 'o' : 'x'; // fica com o inverso da escolha inicial
         String nomedojogador = (jogadores == 2) ? "JOGADOR1" : "VOCE"; // nome do jogador
         String nomeoutrojogador = (jogadores == 2) ? "JOGADOR2" : "ROBO"; // nome do outro jogador
+        char ganhador = 'D'; // inicia variavel do ganhador
         char[][] matriz = {{'#','#', '#'}, {'#', '#', '#'}, {'#', '#', '#'}}; // limpa a velha
         System.out.println("Iniicializando...");
         System.out.println("_________________");
@@ -162,6 +163,7 @@ public class A3 {
                 System.out.println("-----------------");
                 if (fimderodada(matriz, escolhido, outrojogador)[1]) {
                     System.out.printf("-> [%s] Ganhou! ( %c )\n", nomedojogador, escolhido); // vitoria do usuario
+                    ganhador = (escolhido);
                 } else {
                     if (jogadores == 2) {  // serve apenas para vitoria do 2 ou robo
                         nomedojogador = "JOGADOR1";
@@ -169,11 +171,12 @@ public class A3 {
                     }
                     System.out.printf("-> [%s] Ganhou! ( %c )\n", nomeoutrojogador, outrojogador); // vitoria do outro jogador
                     System.out.printf("-> [%s] Perdeu! ( %c )\n", nomedojogador, escolhido);
+                    ganhador = (outrojogador);
                 }
                 System.out.println("_________________");
                 System.out.print("-----------------");
                 break;
-            };
+            }
         } while (rodada < 9); // maximo de rodadas, falta a logica de vitoria
         if (rodada == 9) {
             // deu velha empate
@@ -185,11 +188,28 @@ public class A3 {
             System.out.println("-> Deu VELHA!");
             System.out.println("_________________");
             System.out.print("-----------------");
+            ganhador = 'D';
+
+            
         }
+        return ganhador;
     }
+    public static int Pontuação(char ganhador, char escolha) throws Exception{// compara o ganhador do jogo com a escolha do jogador para retornar a pontuação correta.
+        int ponto = 0; // iniciando variavel ponto
+        if (ganhador == escolha){// compara se o ganhador do round foi o jogador1
+            ponto = 0; // atribui a posição da array para adicionar ponto
+        }
+        else {
+            ponto = 1;
+        }
+        
+        return ponto;
+    };
     public static void main(String[] args) throws Exception {
         char escolha = 'o'; // valor padrao
         int jogadores = 1; // valor padrao
+        char ponto = 'D'; // inicia variavel ponto
+        int[] placar = {0,0};
         Scanner sc = new Scanner(System.in); // abertura de scanner
         do {
             System.out.print("Quantidade de jogadores (1/2): ");
@@ -199,7 +219,9 @@ public class A3 {
             System.out.print("Inicie com (o/x): ");
             escolha = sc.next().charAt(0); // definicao da escolha do usuario entre x e o
         } while (escolha != 'o' && escolha != 'x');
-        jogo(sc, escolha, jogadores); // chamando o jogo com os parametros
+        ponto = jogo(sc, escolha, jogadores); // chamando o jogo com os parametros dentro da variavel ponto para definir o ganhador
+        placar[Pontuação(ponto, escolha)]++; // icrementa a pontuação dentro do placar
+        System.out.println("Jogador 1: " + placar[0] + "Jogador 2: " + placar[1]);
         sc.close(); // fechamento esperado
     };
 };
