@@ -12,8 +12,11 @@ O bot utiliza uma lógica simples para realizar suas jogadas.
 • Modo 2 Jogadores: Dois jogadores podem jogar alternadamente no mesmo computador.
 
 Verificação automática de:
+
 • Vitória de um jogador.
+
 • Empate.
+
 • Jogadas inválidas.
 
 Interface textual simples e intuitiva via terminal.
@@ -25,16 +28,15 @@ Interface textual simples e intuitiva via terminal.
 • Entrada e saída de dados via console
 # Como Executar
 Clone o repositório:
-
 • git clone https://github.com/seu-usuario/seu-repositorio.git
+
 Acesse a pasta do projeto:
-
 • cd seu-repositorio
+
 Compile os arquivos Java:
-
 • javac *.java
-Execute o programa:
 
+Execute o programa:
 • java Main
 
 Obs.: O nome da classe principal pode variar conforme a implementação do projeto.
@@ -44,9 +46,15 @@ Obs.: O nome da classe principal pode variar conforme a implementação do proje
 Este projeto foi desenvolvido com o objetivo de aplicar conceitos estudados na disciplina, incluindo:
 
 • Estruturas condicionais;
+
 • Estruturas de repetição;
+
 • Vetores e matrizes;
+
 • Modularização de código;
+
 • Manipulação de entrada e saída de dados;
+
 • Lógica de programação;
+
 • Programação Orientada a Objetos em Java.
