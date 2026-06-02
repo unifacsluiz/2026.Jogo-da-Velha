@@ -1,4 +1,7 @@
 // A3 de Algoritmos e Programacao
+// Alvaro Dantas
+// Davi Oliveira
+// Guilherme Pieroni
 // Luiz Miguel
 
 package app;
@@ -218,12 +221,15 @@ public class A3 {
         } while (escolha != 'o' && escolha != 'x');
         ponto = jogo(sc, escolha, jogadores); // chamando o jogo com os parametros dentro da variavel ponto para definir o ganhador
         placar[Pontuação(ponto, escolha)]++; // icrementa a pontuação dentro do placar
-        System.out.println("Jogador 1: " + placar[0] + "Jogador 2: " + placar[1]);
+        System.out.println("  JOGADOR1: " + placar[0]);
+        System.out.println("  JOGADOR2: " + placar[1]);
+        System.out.println("-----------------");
         char jogarnovamente = '?';
         do {
             System.out.print("Jogar novamente? (y/n): ");
             jogarnovamente = sc.next().charAt(0); // jogar novamente?
         } while (jogarnovamente != 'y' && jogarnovamente != 'n');
+        System.out.println("-----------------");
         if (jogarnovamente == 'y') {
             main(new String[0]);
         } else {
