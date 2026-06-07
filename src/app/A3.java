@@ -1,6 +1,6 @@
 // A3 de Algoritmos e Programacao
 // Alvaro Dantas
-// Davi Oliveira
+// Davi Santana
 // Guilherme Pieroni
 // Luiz Miguel
 
@@ -77,9 +77,19 @@ public class A3 {
         int rodada = 0; // iniciando partida
         int cursorlinha = 1; // iniciando cursor linha
         int cursorcoluna = 1; // iniciando cursor coluna
-        char outrojogador = (escolhido == 'x') ? 'o' : 'x'; // fica com o inverso da escolha inicial
-        String nomedojogador = (jogadores == 2) ? "JOGADOR1" : "VOCE"; // nome do jogador
-        String nomeoutrojogador = (jogadores == 2) ? "JOGADOR2" : "ROBO"; // nome do outro jogador
+        char outrojogador; String nomedojogador; String nomeoutrojogador;
+        if (escolhido == 'x') {
+            outrojogador = 'o';
+        } else {
+            outrojogador = 'x';
+        } // fica com o inverso da escolha inicial
+        if (jogadores == 2) {
+            nomedojogador = "JOGADOR1"; // nome do jogador 1
+            nomeoutrojogador = "JOGADOR2"; // nome do jogador 2
+        } else {
+            nomedojogador = "VOCE"; // nome do jogador
+            nomeoutrojogador = "ROBO"; // nome do outro jogador
+        }
         char ganhador = 'D'; // inicia variavel do ganhador
         char[][] matriz = {{'#','#', '#'}, {'#', '#', '#'}, {'#', '#', '#'}}; // limpa a velha
         System.out.println("Iniicializando...");
